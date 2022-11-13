@@ -23,10 +23,10 @@ weight_entry_boxes_tracker = 11 #used to make sure redraw isn't called 11 times 
 
 # FRAMES
 frm_inputFunds = Frame(bg='#D3D3D3')
-frm_inputFunds.pack(fill='x')
+frm_inputFunds.grid(row=1,column=0,columnspan=2,sticky=EW)
 
 frm_editors = Frame() # holds the sector weight editors
-frm_editors.pack(side='left', anchor='n') 
+frm_editors.grid(row=2,column=0)
 
 # CONFIGURE rows and columns in frames
 frm_editors.rowconfigure([0,1,2,3,4,5,6,7,8,9,10,11], minsize=25, weight=1)
@@ -261,7 +261,7 @@ for i in range(11):
     allocation_labels[i].grid(row=i+1,column=4,sticky="w",padx=15)
 
 #PACKING / GRIDDING - pie chart
-frm_chart.pack(side='top')
+frm_chart.grid(row=2,column=1)
 
 # BINDS
 ent_funds.bind("<FocusIn>", temp_text)
