@@ -18,6 +18,9 @@ with open('sector_weights.txt','r') as f:
 
 sum_of_sector_weights = sum(sector_weights)
 
+#need to make this better
+weight_entry_boxes_tracker = 11 #used to make sure redraw isn't called 11 times on startup
+
 # FRAMES
 frm_inputFunds = Frame(bg='#D3D3D3')
 frm_inputFunds.pack(fill='x')
@@ -58,12 +61,16 @@ def updateSectorWeights(): #updates the weights of each sector
     if sum_of_sector_weights > 100 or sum_of_sector_weights < 100:
         lbl_totalweight_number.config(text=str(round(sum_of_sector_weights,2)),fg='red')
     elif sum_of_sector_weights == 100:
+        redraw()
         lbl_totalweight_number.config(text=str(round(sum_of_sector_weights,2)),fg='green')
 
 def callback(sv,index): #called when any of the weight entry boxes are edited
-    if sv.get() != '':
+    global weight_entry_boxes_tracker
+    weight_entry_boxes_tracker -= 1
+    if sv.get() != '' and weight_entry_boxes_tracker < 0:
         number = float(sv.get())
         sector_weights[index] = number
+        rewriteSectorWeights()
         updateSectorWeights()
         updateAllocations()
 

@@ -44,8 +44,13 @@ canvas.draw()
 # COMMANDS
 
 def redraw():
-    return
-    #TODO
+    ax.clear()
+    patches, texts, pcts = ax.pie(
+    sector_weights, labels=sector_names, autopct='%.1f%%',
+    wedgeprops={'linewidth': 0, 'edgecolor': 'white'},
+    colors=colors)
+    plt.setp(pcts, color='white', fontweight='bold')
+    fig.canvas.draw_idle()
 
 # WIDGETS
 
