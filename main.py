@@ -2,7 +2,7 @@
 #TODO add % symbol to weights
 #TODO make plus/minus buttons look nicer
 #TODO fix pie chart location
-#TODO make text entered in boxes update the sector_weights list
+#TODO PIE CHART DOESN'T UPDATE WHEN TEXT ENTERED IN ENT BOXES
 
 from tkinter import *
 import os

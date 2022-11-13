@@ -35,7 +35,6 @@ plt.setp(pcts, color='white', fontweight='bold')
 
 # FRAMES
 frm_chart = Frame()
-frm_chart.pack(side='right')
 
 # CONFIGURE rows and columns in frames
 canvas = FigureCanvasTkAgg(fig, master=frm_chart)

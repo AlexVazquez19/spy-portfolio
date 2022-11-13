@@ -3,7 +3,7 @@
 from tkinter import *
 from functools import partial
 from tkinter import font
-from pie_chart import updateChartNumbers, redraw
+from pie_chart import updateChartNumbers, redraw, frm_chart
 
 # DATA
 sector_names = ['Information Technology','Health Care','Consumer Discretionary','Communication Services',
@@ -259,6 +259,9 @@ lbl_totalweight_number.grid(row=12,column=2,sticky="w")
 # PACKING / GRIDDING - money allocation labels
 for i in range(11):
     allocation_labels[i].grid(row=i+1,column=4,sticky="w",padx=15)
+
+#PACKING / GRIDDING - pie chart
+frm_chart.pack(side='top')
 
 # BINDS
 ent_funds.bind("<FocusIn>", temp_text)
