@@ -17,7 +17,7 @@ with open('sector_weights.txt','w') as f:
 # WINDOW
 window = Tk()
 window.title("Spy Portfolio Optimizer")
-window.geometry('1078x515')
+window.geometry('1078x750')
 
 # FRAMES
 frm_title = Frame(bg='#4169e1') # holds the title
@@ -30,7 +30,7 @@ frm_title.columnconfigure([0,1], weight=1)
 # IMPORT FILES
 import weight_editors
 import pie_chart
-import stock_picker
+import stock_selection
 
 # WIDGETS
 lbl_title = Label(master=frm_title,font=('Helvetica',25,'bold'),text='Spy Portfolio',bg='#4169e1',fg='white')
