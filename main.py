@@ -17,7 +17,7 @@ with open('sector_weights.txt','w') as f:
 # WINDOW
 window = Tk()
 window.title("Spy Portfolio Optimizer")
-window.geometry('1078x775')
+window.geometry('1078x850')
 
 # FRAMES
 frm_title = Frame(bg='#4169e1') # holds the title

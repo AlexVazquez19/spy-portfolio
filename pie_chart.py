@@ -1,8 +1,7 @@
 from tkinter import *
 import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, 
-NavigationToolbar2Tk)
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 # DATA
 sector_names = ['Information Technology','Health Care','Consumer Discretionary',
