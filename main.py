@@ -30,7 +30,8 @@ frm_title.columnconfigure([0,1], weight=1)
 # IMPORT FILES
 import weight_editors
 import pie_chart
-import stock_selection
+#import stock_selection
+import stock_entry
 
 # WIDGETS
 lbl_title = Label(master=frm_title,font=('Helvetica',25,'bold'),text='Spy Portfolio',bg='#4169e1',fg='white')
