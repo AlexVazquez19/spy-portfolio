@@ -16,7 +16,7 @@ with open('sector_weights.txt','w') as f:
 
 # WINDOW
 window = Tk()
-window.title("Spy Portfolio Optimizer")
+window.title("Investment Portfolio")
 window.geometry('1078x850')
 
 # FRAMES
